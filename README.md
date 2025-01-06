@@ -10,26 +10,43 @@ To set up the Task Management Application locally, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/tm-app.git
+   git clone https://github.com/ahmed-el-khoribi/tasks-manager.git
    cd tm-app
    ```
 
 2. **Install Dependencies**:
    Make sure you have Node.js and npm installed. Then, run:
    ```bash
+   cd tasks-manager
+   composer install
+   cp .env.example .env
+   cd breeze-next
+   cp .env.example .env
    npm install
    ```
 
 3. **Set Up Environment Variables**:
    Create a `.env` file in the root directory and configure your environment variables. You may need to set up your API base URL and any other necessary configurations.
 
-4. **Run the Application**:
-   Start the development server:
+4. **Database setting**:
+   Make sure you created database with name corresponding to the configured in your .env. Then, run:
    ```bash
+   php artisan migrate
+   php artisan db:seed
+   ```
+
+5. **Run the Application**:
+   Start the development server Terminal 1:
+   ```bash
+   php artisan serve
+   ```
+   Start the development server Terminal 2:
+   ```bash
+   cd breeze-next
    npm run dev
    ```
 
-5. **Access the Application**:
+6. **Access the Application**:
    Open your browser and navigate to `http://localhost:3000` to view the application.
 
 ## API Documentation
@@ -82,4 +99,4 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) file for details.

@@ -11,7 +11,7 @@ To set up the Task Management Application locally, follow these steps:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/ahmed-el-khoribi/tasks-manager.git
-   cd tm-app
+   
    ```
 
 2. **Install Dependencies**:
